@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles.css">
+        <title>About</title>
+    </head>
+    <body>
+        <h1>About page</h1>
+        <%= message %>
+
+        <%- include('navbar', {links: navLinks}) %>
+
+        <ul>
+            <% users.forEach((user) => { %>
+                <%- include('users/user', {user: user}); %>
+            <% }); %>
+        </ul>
+
+        <%- include('footer', {links: footerLinks}) %>
+    </body>
+</html>
